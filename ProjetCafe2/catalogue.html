@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogue - Sunset Café</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="styles/catalogue.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Brawler&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Calligraffitti&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Bentham&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Corben&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Caudex&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cabin&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Allan&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cherry+Cream+Soda&subset=latin' rel='stylesheet' type='text/css'>
+  <link
+    href="https://www.dafontfree.net/embed/c29uc2llLW9uZS1yZWd1bGFyJmRhdGEvMTkvcy85MjQ5OS9Tb25zaWVPbmUtUmVndWxhci5vdGY"
+    rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div id="logo-slog">
+      <div id="logo">Sunset Café</div>
+      <div id="slogan">La chaleur du soleil, couleur crépuscule</div>
+    </div>
+    <nav id="menu">
+      <div id="left-menu">
+        <a href="index.html" class="menu-elem">Accueil</a>
+        <a href="catalogue.html" class="menu-elem">Catalogue</a>
+        <a href="contact.html" class="menu-elem">Contact</a>
+      </div>
+      <div id="right-menu">
+        <!-- <a href="#" class="menu-elem">Connexion</a> -->
+        <a href="panier.html" class="menu-elem">Panier<img src="media/images/Shopping_basket.svg" id="panier"
+            class="menu-elem" alt="ico-pan"></a>
+      </div>
+
+    </nav>
+  </header>
+
+  <div id="cat-aside-main">
+
+    <aside id="aside-catalogue" class="pb-5">
+      <h2 class="h-manus">Filtres</h2>
+      <div class="filters grid" id="filters-bar">
+
+        <h3 class="col1">Catégories</h3>
+        <div id="categoryContainer">
+        <input type="radio" name="category-radio" title="Tous" id="tous-filter" class="col2 category-filters" />
+        <label for="tous-filter" class="col3">Tous</label>
+        <input type="radio" id="grains-filter" name="category-radio" title="Café en grains" class="col2 category-filters" />
+        <label for="grains-filter" class="col3">Café en grains</label>
+        <input type="radio" id="moulu-filter" name="category-radio" title="Café moulu" class="col2 category-filters" />
+        <label for="moulu-filter" class="col3">Café moulu</label>
+        <input type="radio" id="capsules-filter" name="category-radio" title="Café en capsules" class="col2 category-filters" />
+        <label for="capsules-filter" class="col3">Café en capsules</label>
+        <input type="radio" id="dosettes-filter" name="category-radio" title="Café en dosettes" class="col2 category-filters" />
+        <label for="dosettes-filter" class="col3">Café en dosettes</label>
+        </div>
+
+        <h3 class="col1">Type</h3>
+        <div id="typeContainer">
+        <label for="all-type-filter" class="col3" >Tous</label>
+        <input type="radio" id="all-type-filter" name="type-radio" title="Tous" class="col2 type-filters" checked />
+        <label for="arabica-filter" class="col3">Arabica</label>
+        <input type="radio" id="arabica-filter" name="type-radio" title="Arabica" class="col2 type-filters" />
+        <label for="arabica-filter" class="col3">Arabica</label>
+        <input type="radio" id="robusta-filter" name="type-radio" title="Robusta" class="col2 type-filters" />
+        <label for="robusta-filter" class="col3">Robusta</label>
+      </div>
+
+        <h3 class="col1">Prix</h3>
+        <label for="min-filter" class="col2">Prix minimum</label>
+        <input type="range" id="min-filter" name="min-filter" class="col1-to-5 price-range-filters" min="0" max="100" step="1" value="0"/>  <!-- Modifier et creer classe col 1to4 si marche pas-->
+
+        <label for="max-filter" class="col2">Prix maximum</label>
+        <input type="range" id="max-filter" name="max-filter" class="col1-to-5 price-range-filters" min="0" max="100" step="1" value="100"/>
+      </div>
+
+      <div class="suggestion-gauche">
+        <div class="h3-manus">Lien</div>
+        <div>Descrim Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus optio perferendis dolor
+          neque nemo consectetur, animi voluptatibus fuga in quaerat minus!</div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main id="main-catalogue">
+      <h1 class="page-title">Catalogue</h1>
+
+      <div class="grid-catalogue grid" id="grid">
+        <!-- Modif fonctions cart.js pour prendre en compte la quantité de produits ; il ne faut pas pvr aller jusqu'à -1-->
+        <div class="card grid">
+          <img src="./media/images/cafe.jpg" class="card__image" alt="">
+          <div class="card__info">
+            <h3 class="card__title"><a href="/produit.html">Café Vanille du Rwanda</a></h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto
+              eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+            </p>
+            <p class="card__price">7.99</p>
+            <div class="counter-div" display="none">
+              <button class="plus-btn">+</button><span class="card__quantity">1</span><button
+                class="minus-btn">-</button>
+            </div>
+            <button class="card__btn add-to-cart" data-id="1" data-category="Café en grains" data-type="Robusta">Add to Cart</button>
+
+          </div>
+          <div class="category_indicator" style="background-color: black" >
+
+          </div>
+        </div>
+
+        <div class="card grid">
+          <img src="./media/images/cafe.jpg" class="card__image" alt="">
+          <div class="card__info">
+            <h3 class="card__title"><a href="/produit.html">Café Single Origin du Costa Rica</a></h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto
+              eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+            </p>
+            <p class="card__price">16.99</p>
+            <div class="counter-div" display="none">
+              <button class="plus-btn">+</button><span class="card__quantity">1</span><button
+                class="minus-btn">-</button>
+            </div>
+            <button class="card__btn add-to-cart" data-id="2" data-category="Café en capsules" data-type="Arabica">Add to Cart</button>
+
+          </div>
+          <div class="category_indicator" style="background-color: grey" >
+
+          </div>
+        </div>
+        <div class="card grid">
+          <img src="./media/images/cafe.jpg" class="card__image" alt="">
+          <div class="card__info">
+            <h3 class="card__title"><a href="/produit.html">Café Arabica du Kenya</a></h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto
+              eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+            </p>
+            <p class="card__price">11.99</p>
+            <div class="counter-div" display="none">
+              <button class="plus-btn">+</button><span class="card__quantity">1</span><button class="minus-btn">-</button>
+            </div>
+            <button class="card__btn add-to-cart" data-id="3" data-category="Café en capsules" data-type="Arabica">Add to Cart</button>
+
+          </div>
+          <div class="category_indicator" style="background-color: grey">
+
+          </div>
+        </div>
+
+        <div class="card grid">
+          <img src="./media/images/cafe.jpg" class="card__image" alt="">
+          <div class="card__info">
+            <h3 class="card__title"><a href="#">Café Robusta du Vietnam</a></h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto
+              eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+            </p>
+            <p class="card__price">6.99</p>
+            <div class="counter-div" display="none">
+              <button class="plus-btn">+</button><span class="card__quantity">1</span><button
+                class="minus-btn">-</button>
+            </div>
+            <button class="card__btn add-to-cart" data-id="4"  data-category="Café en dosettes" data-type="Robusta">Add to Cart</button>
+          </div>
+          <div class="category_indicator" style="background-color: white">
+
+          </div>
+        </div>
+        <div class="card grid">
+          <img src="./media/images/cafe.jpg" class="card__image" alt="">
+          <div class="card__info">
+            <h3 class="card__title"><a href="#">Café Artisanal du Honduras</a></h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto
+              eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+            </p>
+            <p class="card__price">7.15</p>
+            <div class="counter-div" display="none">
+              <button class="plus-btn">+</button><span class="card__quantity">1</span><button
+                class="minus-btn">-</button>
+            </div>
+            <button class="card__btn add-to-cart" data-id="5" data-category="Café en dosettes" data-type="Robusta">Add to Cart</button>
+          </div>
+          <div class="category_indicator" style="background-color: white">
+
+          </div>
+        </div>
+
+        <div class="card grid">
+          <img src="./media/images/cafe.jpg" class="card__image" alt="">
+          <div class="card__info">
+            <h3 class="card__title"><a href="#">Café Équitable du Mexique</a></h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto
+              eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+            </p>
+            <p class="card__price">8.45</p>
+            <div class="counter-div" display="none">
+              <button class="plus-btn">+</button><span class="card__quantity">1</span><button
+                class="minus-btn">-</button>
+            </div>
+            <button class="card__btn add-to-cart" data-id="6" data-category="Café moulu" data-type="Arabica">Add to Cart</button>
+          </div>
+          <div class="category_indicator" style="background-color: brown"  >
+
+          </div>
+        </div>
+        <div class="card grid">
+          <img src="./media/images/cafe.jpg" class="card__image" alt="">
+          <div class="card__info">
+            <h3 class="card__title"><a href="#">Café Rainforest Alliance du Pérou</a></h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto
+              eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+            </p>
+            <p class="card__price">14.50</p>
+            <div class="counter-div" display="none">
+              <button class="plus-btn">+</button><span class="card__quantity">1</span><button
+                class="minus-btn">-</button>
+            </div>
+            <button class="card__btn add-to-cart" data-id="7" data-category="Café en grains" data-type="Arabica">Add to Cart</button>
+          </div>
+          <div class="category_indicator" style="background-color: black">
+
+          </div>
+        </div>
+
+        <div class="card grid">
+          <img src="./media/images/cafe.jpg" class="card__image" alt="">
+          <div class="card__info">
+            <h3 class="card__title"><a href="">Café Fruité du Brésil</a></h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto
+              eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+            </p>
+            <p class="card__price">9.99</p>
+            <div class="counter-div" display="none">
+              <button class="plus-btn">+</button><span class="card__quantity">1</span><button
+                class="minus-btn">-</button>
+            </div>
+            <button class="card__btn add-to-cart" data-id="8" data-category="Café en grains" data-type="Arabica">Add to Cart</button>
+          </div>
+          <div class="category_indicator" style="background-color: black" ></div>
+        </div>
+
+      </div>
+
+
+  </div>
+  </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div id="foot-container">
+      <div class="foot-list">
+        <h3>Nous découvrir</h3>
+        <ul>
+          <li>
+            <p>18 boulevard des Pyrénées</p>
+            <p>64000 Pau</p>
+            <p>05 59 88 24 18</p>
+            <p>contact@sunsetcoffee.fr</p>
+
+          </li>
+        </ul>
+      </div>
+      <div class="foot-list">
+        <p>Suivez-nous sur les réseaux sociaux !</p>
+        <!--  site pour elements composants -->
+        <div class="rs-icons">
+          <span style="font-size: 2em; color: white;">
+            <i class="fa fa-instagram fa-2xs" aria-hidden="true"></i></span>
+          <span style="font-size: 2em; color: white;">
+            <i class="fa fa-brands fa-facebook fa-2xs" style="color: #ffffff;"></i></span>
+          <span style="font-size: 2em; color: white;">
+            <i class="fa fa-brands fa-twitter fa-2xs" style="color: #ffffff;"></i></span>
+          <span style="font-size: 2em; color: white;">
+            <i class="fa fa-brands fa-snapchat fa-2xs" style="color: #ffffff;"></i></span>
+        </div>
+      </div>
+      <div class="foot-list">
+        <h3>Nous découvrir</h3>
+        <ul>
+          <li>
+            <p>18 boulevard des Pyrénées</p>
+            <p>64000 Pau</p>
+            <p>05 59 88 24 18</p>
+            <p>contact@sunsetcoffee.fr</p>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p>Copyright &copy; 2023</p>
+  </footer>
+  
+  <script type="text/javascript" src="./js/catalogue.js"></script>
+  <!-- <script type="text/javascript" src="./js/script.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!-- tableau pour articles, idem pour paiement
+grille pour catalogue ? -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page d'accueil</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="styles/panier.css" rel="stylesheet" type="text/css" />
+  <link href="styles/style-SAP.css" rel="stylesheet" type="text/css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" /> <!-- Google symboles en txt (modif weight ou autres)-->
+  <link href='https://fonts.googleapis.com/css?family=Brawler&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Calligraffitti&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Bentham&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Corben&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Caudex&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cabin&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Allan&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cherry+Cream+Soda&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Sonsie One' rel='stylesheet'>
+</head>
+
+<body>
+  <div id="body-container">
+
+    <!-- Header -->
+    <!-- <div id="css-grid">
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+  </div> -->
+    <header>
+      <div id="logo-slog">
+        <div id="logo">Sunset Café</div>
+        <div id="slogan">La chaleur du soleil, couleur crépuscule</div>
+      </div>
+      <nav id="menu">
+        <div id="left-menu">
+          <a href="index.html" class="menu-elem">Accueil</a>
+          <a href="catalogue.html" class="menu-elem">Collection</a>
+          <a href="contact.html" class="menu-elem">Contact</a>
+        </div>
+        <div id="right-menu">
+          <a href="#" class="menu-elem">Connexion</a>
+          <a href="panier.html" class="menu-elem">Panier<img src="media/images/Shopping_basket.svg" id="panier"
+              class="menu-elem" alt="ico-pan"></a>
+        </div>
+
+      </nav>
+    </header>
+
+    <main id="main-panier">
+      <div id="div-coordonnees">
+        <h2>Coordonnées</h2>
+        <form class="formulaire" id="form-coords" name="form-coords" action="paiement.html" method="POST">
+
+          <label for="util_prenom" class="form-col1">Prénom</label>
+          <input type="text" class="form-col2" name="util_prenom" id="util_prenom">
+          <label for="util_nom" class="form-col3">Nom</label>
+          <input type="text" class="form-col4" name="util_nom" id="util_nom">
+
+
+          <label for="util_adresse" class="form-col1">Adresse</label>
+          <input type="text" class="form-col2" name="util_adresse" id="util_adresse">
+          <label for="util_ville" class="form-col3">Ville</label>
+          <input type="text" class="form-col4" name="util_ville" id="util_ville">
+
+          <label for="util_region" class="form-col1">Région</label>
+          <input type="text" class="form-col2" name="util_region" id="util_region">
+          <label for="util_dpt" class="form-col3">Dpt</label>
+          <input type="text" class="form-col4" name="util_dpt" id="util_dpt">
+
+          <label for="util_telephone" class="form-col1">Téléphone</label>
+          <input type="tel" class="form-col2" name="util_telephone" id="util_telephone">
+
+          <label for="util_mail" class="form-col1">Mail</label>
+          <input type="tel" name="util_mail" class="form-col2" id="util_mail">
+
+          <div class="buttons form-col4" id="btns-coords">
+            <label for="btn_submit"></label>
+            <input type="submit" value="Enregistrer" name="submit">
+
+            <label for="btn_reset"></label>
+            <input type="reset" value="Reset" name="reset" id="reset">
+
+            <!--<label for="btn_affichage"></label>
+            <input type="button" value="Affichage Form" name="btn_affichage" id="btn_affichage" onclick="return affichageForm()"> -->
+          </div>
+
+        </form>
+        </h2>
+
+      </div>
+
+      <div id="div-panier">
+        <h2>Panier</h2>
+        <div>
+          <table id="table-panier">
+            <thead>
+              <tr>
+                <th>Image produit</th>
+                <th>Nom Produit</th>
+                <th>Quantité</th>
+                <th>Prix Unitaire</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>
+                  <img src="./media/images/cafe.jpg" alt="Produit" />
+                </td>
+                <td>Nom Produit</td> <!-- {product.name} -->
+                <td>x2</td>
+                <td>7,99€</td>
+                <td>{product.quantity * product.price}</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div id="foot-container">
+        <div class="foot-list">
+          <h3>Nous découvrir</h3>
+          <ul>
+            <li>
+              <p>18 boulevard des Pyrénées</p>
+              <p>64000 Pau</p>
+              <p>05 59 88 24 18</p>
+              <p>contact@sunsetcoffee.fr</p>
+
+            </li>
+          </ul>
+        </div>
+        <div class="foot-list">
+          <p>Suivez-nous sur les réseaux sociaux !</p>
+          <ul>
+            <li>
+              <p>18 boulevard des Pyrénées</p>
+              <p>64000 Pau</p>
+              <p>05 59 88 24 18</p>
+              <p>contact@sunsetcoffee.fr</p>
+
+            </li>
+          </ul>
+        </div>
+        <div class="foot-list">
+          <h3>Nous découvrir</h3>
+          <ul>
+            <li>
+              <p>18 boulevard des Pyrénées</p>
+              <p>64000 Pau</p>
+              <p>05 59 88 24 18</p>
+              <p>contact@sunsetcoffee.fr</p>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p>Copyright &copy; 2023</p>
+    </footer>
+    <script type="text/javascript" src="js/script.js" async></script>
+  </div>
+</body>
+
+</html>

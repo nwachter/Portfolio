@@ -1,0 +1,68 @@
+:root {
+    --blackboard: #31343A;
+}
+
+.h2-manus-green {
+    color: var(--moss-green);
+    font-size: 2em;
+    font-family: "Corben", serif, "Caudex", serif;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    background-color: #111213;
+    justify-items: center;
+}
+
+/*        Visuel -gauche-            */
+#visuel-container {
+    grid-column-start: 1;
+}
+
+.description {
+    /*background-color: var(--moss-green);*/
+    padding: 1em;
+    font-size: 1.25em;
+    color: var(--seashell)
+
+}
+
+/*    Infos droite  */
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+.icons > * {
+    
+
+
+}
+.info-bar {
+    width: 30vw;
+    background-color: var(--blackboard);
+    display: grid;
+    grid-template-rows: repeat(4, minmax(40px, max-content));
+    justify-items: center;
+    align-items: end;
+    box-shadow:inset white 0px 0px 2px 3px;
+}
+
+.formulaire input[type=submit], .save-btn {
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	background-color:#ffc477;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	display:inline;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:14px;
+	font-weight:bold;
+	padding:10px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}

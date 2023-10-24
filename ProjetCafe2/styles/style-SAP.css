@@ -1,0 +1,307 @@
+                 
+ 
+ 
+ /* Accueil 5 Sorties */
+
+          .container_sorties {
+               /* background-color: #392F2D;   */         
+                position: relative;
+                display: flex;
+               /* margin: 0 0 0 310;*/
+                margin: 0 0 0 0;
+                padding: auto;
+                height: 400px;
+                overflow: scroll;
+            }
+
+            .sortie {
+               /* background-color: #392F2D;*/
+                position: relative;
+                display: inline;
+                width:  400px;
+                border: 2px groove white;
+                margin: 20px 10px 20px 10px;
+                padding: 20px 10px 10px 10px;
+                overflow: scroll;
+            }
+
+            .sortie:hover {                 
+                background-color: #392F2D0e;
+                position: relative;
+                display: inline;
+                width:  400px;
+                border: 2px groove white;
+                margin: 20px 10px 20px 10px;
+                padding: 20px 10px 10px 10px;
+                overflow: scroll;
+
+            }            
+
+            /* Accueil Lieux */
+
+            .accueil_lieux {
+                display: block;
+                position: relative;
+                margin-left: 310px;
+                height: 80%;
+                width: 80%;
+                margin: 10px 5px 50px 10px; 
+                padding: 0px 10px 20px 0px;            
+            }
+
+            .accueil_lieux img {
+                height: 500px;
+            }
+
+
+            /* PAGE LIEUX */
+
+            #container {
+                height: 100%;
+                background-color: white;
+            }
+
+            .liste_lieux {
+                position: relative;
+                /*height: 100%;
+                min-height: 100%;*/
+                display: block;
+                margin: 0px 100px 0px 20px;
+                background-color: white;
+            }
+
+            ul.lieu {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            ul.lieu > li {
+                flex: 2;
+                text-align: center;
+                content: " ";
+                position: relative;
+                height: auto;  
+                margin: 0px 10px 30px 5px;        
+            }
+
+            ul.lieu > li:nth-of-type(n) {  
+                flex: 4 200px;
+                flex-shrink: 2;
+            } 
+
+
+            ul.lieu > li:nth-of-type(2n) {
+                flex: 2 70%;
+            }
+
+
+            .lieu img {
+                position: relative;
+                /*height: 300px;*/
+
+                width:  auto;
+                max-width: 100%;
+            }
+
+
+            .liste_suggestions {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                align-items: stretch;
+
+                width: auto;
+                background-color: #46b1c950;
+                text-align: center;
+            }
+
+            article.suggestion {
+                text-align: center;
+                display: flex;
+                width: 500px;
+                height: auto;
+                flex-direction: column;
+                margin: 5px 5px 5px 5px;
+                border: 3px solid white;
+                background-color: white;
+                color: #392F2D;
+                border-radius: 5px;
+                padding: 5px 5px 5px 5px;                
+            }
+
+            .suggestion .titre {
+                background-color: #320D6D;
+                height: 40px;
+                border-radius: 0px 5px;
+                padding-top: 10px;
+                font-family: "Calligraffitti", serif;
+                color: white;
+            }
+
+
+
+            .liste_suggestions img {
+                background-color: black;
+                position: relative;
+                height: 300px;
+                width: auto;
+                max-width: 100%;
+            }
+
+
+            .slideshow-container .text {
+                height: auto;
+                position: absolute;
+                padding: 0px 10px 50px 10px;
+            }
+
+
+            /* Formulaires */
+
+            form.small_form {
+                position: relative;
+                background-color: #8D7471;
+            }
+
+            .form_items_container {
+                display: flex;
+                flex-wrap: wrap;
+                height: 150px;
+
+            }
+
+            .form_items_container > * {
+                flex: 50%; 
+                box-shadow: 1px 1px .6em #392F2D80;
+                margin-bottom: 10px;                
+            }
+
+            form.small_form label {
+                position: relative;
+                font-family: "Buda", serif;
+                font-size: 13px;
+                padding : 2px 0px 0px 0px;
+            }
+
+            form.small_form legend {
+                font-family: "Calligraffitti", sans-serif;
+                font-size: 12px;
+            } 
+
+ 
+            .sorties_util {
+                background-color: #46b1c9a0;
+            } 
+              
+
+            .sorties_util > div {
+                background-color: #80FF72a0;
+                box-shadow: 1px 1px .6em #F8EBE8a0;
+                border: solid white 1px;
+                padding: 10px 10px 10px 10px;
+                margin: 5px 5px 5px 5px;
+                height: auto;
+            } 
+
+            .sortie_admin {
+                background-color: white;
+                border: groove 2px black;
+                line-height: 1.5em;
+                margin: 5px;
+                padding: 5px;
+                border-bottom: 2px groove #392F2D;
+            }
+
+            .li_sortie_admin {
+                margin: 5px;
+                padding: 5px;
+                border-bottom: 2px groove #392F2D;                
+            }
+
+   
+            form .form_error_msg {
+                position: absolute;
+                margin-left: 500px;
+                font-weight: bold;
+                color: purple;
+            } 
+
+            #form_organiser {
+                background-color: #eae2b7;
+                box-shadow: 1px 1px .6em black;
+            }  
+
+            #form_organiser label {
+                width: 15%;
+
+            }    
+
+
+              .buttons {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                }             
+
+          .div_rechercher {
+            display:  flex;
+            justify-content: space-around;
+            flex: 300px;
+            flex-direction: row;
+            vertical-align: middle;
+            align-items: stretch;
+            justify-content: center; 
+            width: 70%;            
+          }
+
+          .div_rechercher div {
+            text-align: center;
+           
+          }
+
+            .barre_rech {
+                font-family: "Cabin", sans-serif, "Georgia";
+                border: none;
+                list-style-type: circle;
+                display: flex !important;
+                flex: 150px;
+                vertical-align: middle;
+                align-items: stretch;
+                justify-content: center;                 
+
+            }
+            .barre_rech select, .barre_rech input, .barre_rech textarea {
+                height:  90%;
+                box-sizing: border-box;
+
+            }
+
+            .barre_rech select {
+                height: 100%;
+            }
+
+    
+            .boldred {
+                font-weight: 900;
+                color: red;
+            }
+
+
+            span.boldred {
+                color: red;
+                font-weight: bold;
+            } 
+
+             li.lien_utilisateur {
+                position: relative;
+                background-color: red;
+                color: blue !important;
+                margin-left: 1000px;
+                width: 500px;
+            } 
+
+      

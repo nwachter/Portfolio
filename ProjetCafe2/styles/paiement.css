@@ -1,0 +1,123 @@
+/* Liste de produits */
+ul {
+    list-style-type: none;
+}
+
+#product-list {
+    font-family: 'Roboto';
+}
+
+/* Buttons */
+#confirm-checkout-btn {
+    background-color: black;
+    color: white;
+    /* height: 35px; */
+    /* width: 100px; */
+    display: inline-block;
+    padding: 10px 24px;
+    font-family: 'SPECTRAL SC';
+}
+
+#confirm-checkout-btn:hover {
+    background:linear-gradient(to bottom, #252525 5%, #161616 100%);
+	background-color:#000000;
+}
+
+#confirm-checkout-btn:active {
+    position:relative;
+	top:1px;
+}
+
+#cancel-btn {
+    display: inline-block;
+    color: black;
+    padding: 10px 24px;
+    font-family: 'SPECTRAL SC';
+}
+
+/* Main */
+
+.main-payment {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+}
+
+.main-payment > div {
+    border-radius: var(--bs-border-radius-xl);
+    padding: 2em;
+}
+
+/*   Paiement Commande - Order Container   */
+/* Liste de paiements */
+
+.order-container {
+    background-color: var(--tangerine);
+}
+
+
+.option-element > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.option-element > div > img {
+    height: 30px;
+}
+
+.product-element {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr max-content 0.5fr 2fr;
+    align-items: center;
+    align-content: center;
+    justify-items: end;
+}
+
+.subtotal, .delivery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    align-items: center;
+}
+
+ #info-container {
+    padding: 3rem 3rem;
+    margin: 3rem 3rem;
+
+}
+
+#user-info {
+border: dotted 2px #161616;
+max-width: fit-content;
+padding: 4rem;
+background-color:antiquewhite;
+}
+
+
+.payment-container {
+    margin-top: 50px;
+}
+
+.product-element img {
+    max-width: 50%;
+    justify-self:start;
+}
+
+.option-element {
+    margin-bottom: 10px;
+}
+
+.title {
+    margin: 20px 0px;
+}
+
+.option-element {
+    margin-bottom : 5px;
+}

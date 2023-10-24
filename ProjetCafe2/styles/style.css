@@ -1,0 +1,674 @@
+/*   Couleurs - Palettes :
+            Classy Holiday :
+            Seashell F8EBE8
+            Cinereous 8D7471 
+            --cincerous : #8D7471;
+            Black Coffee #392F2D
+            --black-coffee : #392F2D
+            Pacific Blue 46b1c9
+            --pacific-blue : #46b1c9;
+            Persian Indigo 320D6D
+            Tyrian Purple 320d6d
+
+            Tangerine F18700
+            --tangerine : #F18700
+            Screamin Green 80FF72
+            --screamin-green : #80FF72
+            lightseagreen     */
+
+
+/* Polices 
+format() : ttf = truetype ; eot = N/A (IE9) ; woff, woff2, svg = idem ; eot = embedded-opentype (IE6-IE8)
+*/
+
+/*@import url(//fonts.googleapis.com/css?family=Open+Sans);*/
+
+@font-face {
+  font-family: "Bitstream Vera Serif Bold";
+  src: url("/static/styles/libs/font-awesome/fonts/fontawesome-webfont.fdf491ce5ff5.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sonsie One";
+  src: url("../fonts/Sonsie_One/SonsieOne-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Spectral SC";
+  src: url("../fonts/Spectral_SC/SpectralSC-SemiBold.ttf") format('truetype');
+  font-weight: 600;
+}
+
+:root {
+  --seashell : #F8EBE8;
+  --light-brown : #BC6C25cb;
+  --dark-brown : #211409;
+  --moss-green : #606C38;
+  --cincerous : #8D7471;       
+  --black-coffee : #392F2D;
+  --pacific-blue : #46b1c9;
+  --tangerine : #F18700;
+  --screamin-green : #80FF72
+
+}
+
+* {
+  box-sizing: border-box;   /*_____________________________________________ BETA
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' -20,
+  'opsz' 24  /* optical size */
+}
+
+/*.grid {                 -------------------------     DESACTIVATION GRID = BETA  BOOTSTRAP
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+}*/
+
+* {
+  font-size: 12px;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Helvetica";
+  line-height: 1.5em;
+}
+
+
+ul {
+  padding-inline-start: 0px;
+  padding-left: 0px !important;
+}
+
+img.cafe {
+  width: 200px;
+}
+
+/* Body */
+
+body {
+  background-color: #F8EBE8;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0px;
+  font-family: "Open Sans', sans-serif, "Helvetica";
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+#body-container {
+  width: 100%;
+  display: grid;
+  margin: 0 auto;
+  position: relative;
+  /* width: 1440px; */
+  z-index: 1;
+  /* flex-direction: column; */
+  grid-template-rows: auto;
+  align-items: end;
+}
+
+
+
+main {
+  min-width: 100%;
+}
+
+#div-slideshow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header */
+
+header {
+
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-position: 70% 30%;
+  flex-shrink: 0;
+  display: inline-block;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: url("../media/images/sunset-coffee.jpg"), rgba(248, 121, 3, 0.795) 50% / cover no-repeat;
+  background-size: cover;
+  background-position: 70% 40%;
+  content: 'header-bg';
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+
+div#logo,
+div#slogan {
+  height: 100%;
+  line-height: 1.5em;
+}
+
+#logo-slog {
+  position: absolute;
+  /* right: 20px; */
+  height: fit-content;
+  width: 100%;
+  margin: 10%;
+  display: flex;
+  /* top: 55%; */
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+  justify-content: space-between;
+
+  background-repeat: no-repeat;
+}
+
+#logo {
+  display: inline-block;
+  text-align: right;
+  font-family: 'Sonsie One';
+  position: absolute;
+  font-size: 70px;
+  font-weight: bold;
+  color: #BC6C25;
+  -webkit-text-stroke: 3px #fff;
+  /* transform: rotate(10deg); */
+  z-index: 3;
+
+}
+
+#slogan {
+  text-align: right;
+  /* position: absolute; */
+  bottom: 70px;
+  /* margin-left: 70%; */
+  font-size: 16px;
+  color: white;
+  opacity: 1;
+}
+
+.myButton {
+  background-color: #e4a445;
+  border-radius: 13px;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  padding: 11px 36px;
+  text-decoration: none;
+  border: none;
+}
+
+.myButton:hover {
+  background-color: #eae0c2;
+}
+
+
+
+#dessin-cafe {
+  z-index: 4;
+  width: 19%;
+  height: auto;
+  position: absolute;
+  top: 14%;
+  left: 42%;
+
+}
+
+div {
+  font-family: "Brawler", serif, "Helvetica", "Times New Roman";
+}
+
+.div-1 {
+  padding: 1em;
+  margin: 1em;
+  font-family: "Bentham", serif;
+  font-size: 12px;
+
+}
+
+.error-container {
+  font-size: 2em;
+  display: grid;
+  height: 20vh;
+  width: 100vh;
+  color: var(--bs-danger);
+  border: var(--bs-danger-border-subtle);
+  background-color : var(--bs-danger-bg-subtle);
+  font-weight: bold;
+  text-align: center;
+  font-family: "Caudex", serif;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Titres h */
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.h-manus {
+  font-family: "Corben", serif, "Caudex", serif;
+}
+
+.h3-manus {
+  font-family: "Calligraffitti", sans-serif, "Helvetica", "Times New Roman";
+}
+
+/* Liens a */
+
+a {
+  color: orange;
+  text-decoration: none;
+  font-family: "Cabin", sans-serif, "Georgia";
+  font-weight: 900;
+}
+
+a:visited {
+  color: orangered;
+}
+
+
+/* Menu - nav */
+
+nav {
+  position: relative;
+  background-color: black;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  z-index: 10;
+  align-items: center;
+}
+
+
+
+
+#right-menu {
+  /* text-align: right; */
+  display: flex;
+  align-items: baseline;
+}
+
+#left-menu, #right-menu {
+  /* width: 40%;
+  height: 100%;
+  flex:auto;*/
+}
+
+.menu-elem img {
+  height: 20px;
+  width: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  nav {
+    position: relative;
+    flex-direction: column;
+    height: 30vh;
+    background-color: #000000cd;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: stretch;
+    /* font-size: 2rem; */
+
+
+  }
+
+  #logo-slog {
+    position: absolute;
+    /* right: 20px; */
+    height: fit-content;
+    display: flex;
+    /* top: 55%; */
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+    justify-content: space-between;
+
+  }
+
+  nav #left-menu {
+    height: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: stretch;
+
+
+  }
+
+  nav div {
+    font-size: 1rem;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    margin: 0px 0px 0px 10px;
+  }
+
+  nav a {
+    padding: 0.3rem 0;
+    /* border: white solid; */
+    border-left: 1px;
+    border-right: 1px;
+    font-size: 1em;
+    /* line-height: 2em; */
+    padding: 5%;
+  }
+}
+
+
+/*nav div {
+  display: flex;
+  flex-basis: auto;
+  list-style: none;
+  align-items: center;
+  position: relative;
+  font-size: 6px;
+  margin: 0px 0px 0px 0px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;*/
+
+
+nav a,
+nav~a {
+  display: inline;
+  position: relative;
+  padding: 0px 20px;
+  vertical-align: middle;
+  font-family: "Spectral SC", sans-serif, "Cabin", sans-serif, "Georgia";
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none;
+
+  /* 25px = 4em environ */
+}
+
+nav a:visited {
+  color: white;
+  text-decoration: none;
+  text-shadow: black 0px 2px;
+  display: inline;
+  position: relative;
+  padding: 0px 20px;
+  vertical-align: middle;
+  font-family: "Spectral SC", sans-serif, "Cabin", sans-serif, "Georgia";
+  font-weight: bold;
+  font-size: 2em;
+  /* 25px = 4em environ */
+}
+
+nav a:hover {
+  color: #BC6C25;
+}
+/* Section 1 */
+
+
+#section1 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5% 20px 5%;
+  width: 100%;
+}
+
+#section1 h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#section1 p {
+  font-size: 16px;
+}
+
+#carouselExampleCaptions img {
+  height: 400px;
+ width: 500px;
+ object-fit: cover;
+}
+
+#mv1 {
+  background: url("../media/images/mv1.jpg"), #BC6C25cb 50% / cover no-repeat;
+  background-size: cover;
+  background-position: 70% 40%;
+
+}
+
+
+#mv2 {
+  background: url("../media/images/mv2.jpg") #BC6C25cb 50%/ cover no-repeat;
+  background-size: cover;
+  background-position: 70% 40%;
+}
+
+.produits {
+  display: flex;
+  flex: content;
+  width: 100%;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  color: #F8EBE8;
+}
+
+@media only screen and (max-width: 600px) {
+  #section2.produits {
+    display: grid;
+    position: relative;
+    flex-direction: column;
+    height: auto;
+    background-color: #000000cd;
+    justify-items: center;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: stretch;
+
+
+  }
+}
+
+
+.box {
+  height: 200px;
+  min-height: 20%;
+}
+
+.quantity-box {
+  height: 2em;
+  width: 20%;
+  background-color:#F8EBE8;
+  display:inline-block;
+}
+
+
+
+/* produit utilise ds section1 et section2 */
+
+#section1 .produits .produit {
+  height: 100%;
+  width: 100%;
+}
+
+#section2 .produits .produit {
+  display: inline-block;
+}
+
+
+.panier {
+  width: 30px;
+  height: auto;
+}
+
+.slideshow-container a > button {
+  position: absolute;
+  right: 75%;
+  top: 90%;
+}
+
+
+
+/* Section 2 */
+
+.trans-cafe {
+  height: 50px;
+  width: 100%;
+  background-image: url("../media/images/cafe-bg.png");
+  background-repeat: repeat;
+  background-size: 20%;
+  opacity: 0.6;
+}
+
+#section2 {
+  display: flex;
+  flex: 50px 1;
+  flex-direction: column;
+  align-items: center;
+  background-color: #211409;
+  padding: 0px 1% 1% 1%;
+  min-height: 300px;
+  /* Agencer façon site pro */
+}
+
+#produits>.produit {
+  padding: 10px;
+}
+
+#section2 h2 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #F8EBE8;
+  font-family: "Calligraffitti", serif, "Georgia";
+}
+
+#section2 p {
+  font-size: 16px;
+}
+
+/* Section 3 */
+
+#section3 {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+
+#section3 h2 {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Calligraffitti", serif, "Georgia";
+  color: #211409;
+}
+
+#section3 p,
+#section3 a {
+  color: #606C38;
+  /* dark moss green */
+  font-size: 2em;
+}
+
+#categories {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-content: center;
+}
+
+#categories li {
+  display: grid;
+  flex-direction: column;
+  grid-template-rows: 16fr 4fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#categories li img {
+  border-radius: 5px;
+  box-shadow: 3px 4px 0.9em 0.1em;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Footer */
+
+footer {
+  background-color: #000000;
+}
+
+#foot-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  align-content: stretch;
+}
+
+footer p {
+  font-size: 16px;
+  color: green;
+}
+
+.rs-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+/* Page Catalogue */
+
+/*Element*/
+
+.unset {
+  all: unset;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogue - Sunset Café</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="styles/catalogue.css" rel="stylesheet" type="text/css" />
+  <link href="styles/style-SAP.css" rel="stylesheet" type="text/css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+  <link href='https://fonts.googleapis.com/css?family=Brawler&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Calligraffitti&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Bentham&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Corben&subset=latin' rel='stylesheet' type='text/css'>  
+  <link href='https://fonts.googleapis.com/css?family=Caudex&subset=latin' rel='stylesheet' type='text/css'>  
+  <link href='https://fonts.googleapis.com/css?family=Cabin&subset=latin' rel='stylesheet' type='text/css'>     
+  <link href='https://fonts.googleapis.com/css?family=Allan&subset=latin' rel='stylesheet' type='text/css'>      
+  <link href='https://fonts.googleapis.com/css?family=Cherry+Cream+Soda&subset=latin' rel='stylesheet' type='text/css'>
+  <link href="https://www.dafontfree.net/embed/c29uc2llLW9uZS1yZWd1bGFyJmRhdGEvMTkvcy85MjQ5OS9Tb25zaWVPbmUtUmVndWxhci5vdGY" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
+
+</head>
+
+<body id="body-catalogue">
+
+  <!-- Header -->
+  <header>
+    <div id="logo-slog">
+        <div id="logo">Sunset Café</div>
+        <div id="slogan">La chaleur du soleil, couleur crépuscule</div>
+    </div>    
+    <nav id="menu">
+      <div id="left-menu">
+          <a href="index.html" class="menu-elem">Accueil</a>
+          <a href="catalogue.html" class="menu-elem">Collection</a>
+          <a href="contact.html" class="menu-elem">Contact</a>
+      </div>
+      <div id="right-menu">
+          <a href="#" class="menu-elem">Connexion</a>
+          <a href="panier.html" class="menu-elem">Panier<img src="media/images/Shopping_basket.svg" id="panier" class="menu-elem" alt="ico-pan"></a>
+      </div>
+  
+    </nav>    
+  </header> 
+
+  <div id="cat-aside-main" class="grid">
+
+    <aside>
+      <div class="aside-catalogue">
+			<div>
+				<h2 class="h-manus">Suggestions</h2>
+
+				<article class="suggestion-gauche">	
+					<div class="h3-manus"><a href="lieux.php#<?= $suggestion['lieu_ref'] ?>">
+					         Nom Lieu</a></div>	        
+					<div class="suggestion-img"><?= '<img style="width:250px;" src="data:'.$suggestion['image_mime'].';base64, '.base64_encode($suggestion['lieu_image']).'" />'; ?></div>
+					<div>Descrim Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus optio perferendis dolor neque nemo consectetur, animi voluptatibus fuga in quaerat minus!</div>
+				</article>
+			           
+			</div>
+		  </div>        
+    </aside>
+
+  <!-- Main -->
+    <main id="main-catalogue">          
+            <h1>Catalogue</h1>			
+            <div class="div-produit-wrapper">
+              <div class="div-produit">
+                <h2 class="h2-produit"><a href="#">Produit 1</a></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+                </p>  		                                
+                <div><i>Prix</i></div>
+
+                <div class="tab-quantites">
+                  <tr colspan="2">
+                    <td>
+                        +
+                    </td>
+                    <td>
+                        =====
+                    </td>
+                    <td>-</td>
+
+                  </tr>
+                </div>
+          </div>
+                  <div class="div-produit">
+                        <h2 class="h2-produit"><a href="#">Produit 1</a></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ut iusto eligendi consequatur vitae tempore veritatis est itaque eveniet repellendus.
+                        </p>  		                                
+                        <div><i>Prix</i></div>
+
+                        <div class="tab-quantites">
+                          <tr colspan="2">
+                            <td>
+                                +
+                            </td>
+                            <td>
+                                =====
+                            </td>
+                            <td>-</td>
+
+                          </tr>
+                        </div>
+                  </div>
+                      
+                    
+            </div>
+    </main>
+
+  </div>
+
+ <!-- Footer -->
+ <footer>
+  <div id="foot-container">
+    <div class="foot-list">
+      <h3>Nous découvrir</h3>
+        <ul>
+          <li>
+            <p>18 boulevard des Pyrénées</p>
+            <p>64000 Pau</p>
+            <p>05 59 88 24 18</p>
+            <p>contact@sunsetcoffee.fr</p>
+            
+          </li>
+        </ul>
+    </div>
+    <div class="foot-list">
+      <p>Suivez-nous sur les réseaux sociaux !</p>
+      <!--  site pour elements composants -->
+      <div class="rs-icons">
+        <span style="font-size: 2em; color: white;">
+        <i class="fa fa-instagram fa-2xs" aria-hidden="true"></i></span>
+        <span style="font-size: 2em; color: white;">
+          <i class="fa fa-brands fa-facebook fa-2xs" style="color: #ffffff;"></i></span>
+        <span style="font-size: 2em; color: white;">
+          <i class="fa fa-brands fa-twitter fa-2xs" style="color: #ffffff;"></i></span>
+        <span style="font-size: 2em; color: white;">
+          <i class="fa fa-brands fa-snapchat fa-2xs" style="color: #ffffff;"></i></span> 
+      </div>
+    </div>
+    <div class="foot-list">
+      <h3>Nous découvrir</h3>
+        <ul>
+          <li>
+            <p>18 boulevard des Pyrénées</p>
+            <p>64000 Pau</p>
+            <p>05 59 88 24 18</p>
+            <p>contact@sunsetcoffee.fr</p>
+            
+          </li>
+        </ul>
+    </div>            
+  </div>
+  <p>Copyright &copy; 2023</p>
+</footer>
+  <script type="text/javascript" src="js/script.js" async></script>
+</body>
+</html>
