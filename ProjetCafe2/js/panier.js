@@ -130,13 +130,8 @@ window.onload = function () {
   }
 
   function removeProduct(productId) {
-    // remove product from cart (and from local storage)
 
-    // retrieve list of products from LS
     const lsContent = getLSContent();
-
-    // get the index of the product item to remove
-    // inside the local storage content array
     let productIndex;
     lsContent.forEach(function (product, i) {
       if (product.id === productId) {
@@ -144,11 +139,9 @@ window.onload = function () {
       }
     });
 
-    // modify the items in local storage array
-    // to remove the selected product item
 
     lsContent.splice(productIndex, 1);
-    // update local storage content
+
     setLSContent(lsContent);
 
   }
@@ -306,7 +299,7 @@ window.onload = function () {
 
       setLSContent(cartTotal, "total");
 
-      //Refresh panier avec panier final (a supprimer quand le lien du bouton ira a Paiements)
+      //Refresh panier avec panier final
       cartContent.querySelector('tbody').innerHTML = "";
       displayProducts();
 
