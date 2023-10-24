@@ -320,7 +320,7 @@ window.onload = function () {
     e.preventDefault;
     if (e.target.value <= 1) {
       e.target.value = 1;
-      alert('Pas de quantités négatives (afficher en haut du cart en *');
+      alert('Pas de quantités négatives.');
     }
     //ou onchange si value <= 1 mettre value à 1
   }
