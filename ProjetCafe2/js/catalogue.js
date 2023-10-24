@@ -16,7 +16,7 @@ window.onload = function () {
 
     //console.log("LSContent", getLSContent());
 
-    //Ajouter/Retirer quantités  ------------> A SUPPRIMER POSSIBLEMENT
+  
     [...cardElements].forEach(function (cardElement) {
 
         let minusButton = cardElement.getElementsByClassName('minus-btn')[0];
@@ -32,8 +32,6 @@ window.onload = function () {
     }
 
     function getLSContent() {
-        // get contents from local storage.
-        // if nothing is there, create an empty array
         const lsContent = JSON.parse(localStorage.getItem("products")) || [];
         return lsContent;
     }
@@ -54,21 +52,19 @@ window.onload = function () {
 
         let isProductInCart = false;
 
-        // get local storage array
+   
         const lsContent = getLSContent();
 
-        // to avoid user adds the same course twice, check
-        // the product is not in LS already before adding it
+       
+        // Vérifie si le produit est deja dans le panier
         lsContent.forEach(function (product) {
             if (product.id === productId) {
-                alert("This course is already in your cart.");
+                alert("Ce produit est déjà dans votre panier.");
                 isProductInCart = true;
             }
         });
 
-        // only if the product is not already in the cart,
-        // create an object representing selected product info
-        // and push it into local storage array
+
         if (!isProductInCart) {
             lsContent.push({
                 id: productId,
@@ -78,7 +74,6 @@ window.onload = function () {
                 quantity: prodQuantity
             });
 
-            // add product into into local storage
             setLSContent(lsContent);
 
             console.log(lsContent);
@@ -87,7 +82,6 @@ window.onload = function () {
     }
 
 
-    /** Inutile pour le moment  */
 
     function removeOneQuantity(event) {
         let buttonClicked = event.target;
@@ -347,9 +341,7 @@ window.onload = function () {
 
     //----------------------------------------------------------------------  
 
-    /* Evenements et liaisons */
-    // Save product in cart and Local Storage
-    // when add to cart button is clicked
+    /* Evenements et autres */
 
     if (document.readyState !== 'loading') {
 
