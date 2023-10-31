@@ -10,10 +10,10 @@ h1 {
     padding: 5rem;
 }
 .cafe-coords-container {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-evenly;
-
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
 .map {
