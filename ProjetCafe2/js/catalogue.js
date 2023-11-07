@@ -16,7 +16,7 @@ window.onload = function () {
 
     //console.log("LSContent", getLSContent());
 
-  
+
     [...cardElements].forEach(function (cardElement) {
 
         let minusButton = cardElement.getElementsByClassName('minus-btn')[0];
@@ -52,10 +52,10 @@ window.onload = function () {
 
         let isProductInCart = false;
 
-   
+
         const lsContent = getLSContent();
 
-       
+
         // Vérifie si le produit est deja dans le panier
         lsContent.forEach(function (product) {
             if (product.id === productId) {
@@ -148,19 +148,14 @@ window.onload = function () {
         products.push(product);
     }
 
-
-    //Utiliser les objets de l'array pour personnaliser la fonction saveProduct
-
     console.log(products);
 
-    //filtersBar.addEventListener('click', filterResults);
-    //filtersBar.products = products;
     categoryContainer.products = products;
     typeContainer.products = products;
     minPriceFilter.products = products;
     maxPriceFilter.products = products;
 
-    // Ajoutez des écouteurs d'événements aux filtres
+    // Ajout des écouteurs d'événements aux filtres
     categoryContainer.addEventListener('change', filterProducts);
 
     typeContainer.addEventListener('change', filterProducts);
@@ -170,110 +165,43 @@ window.onload = function () {
 
 
     function getCategory() {
-            const currentUrl = window.location.href;
-        //     const grainsFilter = document.getElementById('grains-filter');
-        //     const mouluFilter = document.getElementById('moulu-filter');
-        //     const capsulesFilter = document.getElementById('capsules-filter');
-        //     const dosettesFilter = document.getElementById('dosettes-filter');
-
-
-
-        //     const tousFilter = document.getElementById('tous-filter');
-
-        //     tousFilter.removeAttribute("checked");
-        //     tousFilter.checked = false;
-
-        //     console.log(currentUrl);
-        //     switch (currentUrl) {
-        //       case currentUrl.includes('grains'):
-        //         if(grainsFilter.getAttribute("checked") == null) {
-        //             tousFilter.checked = false;
-        //             grainsFilter.setAttribute("checked", "true");
-        //             grainsFilter.checked = true;
-        //         }
-
-
-
-        //         break;
-        //       case currentUrl.includes('moulu'):
-        //         tousFilter.checked = false;
-        //         mouluFilter.setAttribute("checked", "true");
-        //         mouluFilter.checked = true;
-
-        //         break;
-        //       case currentUrl.includes('capsules'):
-        //         tousFilter.checked = false;
-        //         capsulesFilter.setAttribute("checked", "true");
-        //         capsulesFilter.checked = true;
-
-        //         break;
-        //       case currentUrl.includes('dosettes'):
-        //         tousFilter.checked = false;
-        //         dosettesFilter.setAttribute("checked", "true");
-        //         dosettesFilter.checked = true;
-
-
-        //         break;
-        //         // default: 
-
-        //         // tousFilter.setAttribute("checked", "true");
-        //         // tousFilter.checked = true;
-
-        //     }
-        //     return console.log(currentUrl.includes('grains'), grainsFilter, grainsFilter.checked);
-
-       
-       
+        const currentUrl = window.location.href;
         let selectedCategory;
-                
-        if(currentUrl.includes('grains')) {
-            selectedCategory = "Café en grains";  
+        if (currentUrl.includes('grains')) {
+            selectedCategory = "Café en grains";
         }
         else if (currentUrl.includes('moulu')) {
-            selectedCategory = "Café moulu";  
-
+            selectedCategory = "Café moulu";
         }
         else if (currentUrl.includes('capsules')) {
-            selectedCategory = "Café en capsules";  
-
+            selectedCategory = "Café en capsules";
         }
         else if (currentUrl.includes('dosettes')) {
-            selectedCategory = "Café en dosettes";  
-  
+            selectedCategory = "Café en dosettes";
         }
-        else { 
-            selectedCategory = "Tous";  
+        else {
+            selectedCategory = "Tous";
+            console.log("Categ inclue tous");
+        }
 
-         }
-
-         products.forEach((product) => {
+        products.forEach((product) => {
             let cardElement;
             Array.from(cardElements).forEach((element, index) => {
                 let cardTitle = element.querySelector(".card__title").textContent;
                 if (cardTitle === product.name) {
                     cardElement = element;
                 }
-            });    
-
+            });
 
             const category = product.category;
-
-
             const categoryMatch = selectedCategory.includes(category) || selectedCategory.includes('Tous') || selectedCategory === undefined;
-
             if (categoryMatch) {
                 cardElement.style.display = 'grid';
             } else {
                 cardElement.style.display = 'none';
-            }   
-
+            }
         });
-
     }
-
-
-
-
 
     function filterProducts(e) {
         const categoryFilters = document.querySelectorAll('.category-filters');
@@ -288,14 +216,12 @@ window.onload = function () {
             }
         });
 
-
         typeFilters.forEach((filter) => {
             if (filter.checked) {
                 selectedType = filter;
                 selectedType = selectedType.getAttribute('title');
             }
         });
-
 
         //const selectedCategory = Array.from(categoryFilters)
         //.filter((filter) => filter.checked)
@@ -315,7 +241,6 @@ window.onload = function () {
                     cardElement = element;
                 }
             });
-            //console.log("cardElement : ", cardElement);
 
             /*const category = product.querySelector('.card__btn').getAttribute('data-category');
             const type = product.querySelector('.card__btn').getAttribute('data-type');
@@ -323,7 +248,6 @@ window.onload = function () {
             const category = product.category;
             const type = product.type;
             const price = product.price;
-            //console.log("Produit x : ", product, selectedCategory);
 
             const categoryMatch = selectedCategory.includes(category) || selectedCategory.includes('Tous') || selectedCategory === undefined;
             const typeMatch = selectedType.includes(type) || selectedType.includes('Tous') || selectedType === undefined;
@@ -337,18 +261,12 @@ window.onload = function () {
         });
     }
 
-
-
     //----------------------------------------------------------------------  
 
     /* Evenements et autres */
 
     if (document.readyState !== 'loading') {
-
-        if (location.href.includes('grains') || location.href.includes('moulu') || location.href.includes('capsules') || location.href.includes('dosettes')) {
-            getCategory();
-        }
-
+        getCategory();
     }
 
     productsContainer.addEventListener("click", function (e) {
